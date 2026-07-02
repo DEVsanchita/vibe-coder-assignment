@@ -15,7 +15,7 @@ export function SearchPage() {
 
   const [platform, setPlatform] = useState<Platform>(initialPlatform);
   const [searchQuery, setSearchQuery] = useState("");
-  const [clickCount, setClickCount] = useState(0);
+
 
   const { savedLists, addProfile } = useSavedList();
 
@@ -23,7 +23,7 @@ export function SearchPage() {
   const filtered = filterProfiles(allProfiles, searchQuery);
 
   const handleProfileClick = (username: string) => {
-    setClickCount((prev) => prev + 1);
+    
     console.log("Clicked profile:", username);
   };
 
